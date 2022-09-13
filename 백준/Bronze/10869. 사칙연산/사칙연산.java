@@ -10,10 +10,28 @@ public class Main {
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
         
-        System.out.println(a+b);
-        System.out.println(a-b);
-        System.out.println(a*b);
-        System.out.println(a/b);
-        System.out.println(a%b);
+        StringBuilder sb = new StringBuilder();
+        sb.append(a+b+"\n");
+        sb.append(a-b+"\n");
+        sb.append(a*b+"\n");
+        sb.append(a/b+"\n");
+        sb.append(a%b);
+        
+        System.out.println(sb);
+        
+        /*
+        StringBuilder sb = new StringBuilder();
+        sb.append(a+b);
+        sb.append('\n');
+        sb.append(a-b);
+        sb.append('\n');
+        sb.append(a*b);
+        sb.append('\n');
+        sb.append(a/b);
+        sb.append('\n');
+        sb.append(a%b);
+        
+        System.out.println(sb);
+        */
     }
 }
