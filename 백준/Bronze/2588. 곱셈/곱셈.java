@@ -1,17 +1,19 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        int a = in.nextInt();
-        String b = in.next();
+        int A = Integer.parseInt(br.readLine());
+        String B = br.readLine();
         
-        in.close();
+        char[] b = B.toCharArray();
         
-        System.out.println(a * (b.charAt(2) - '0'));
-        System.out.println(a * (b.charAt(1) - '0'));
-        System.out.println(a * (b.charAt(0) - '0'));        
-        System.out.println(a * Integer.parseInt(b));
+        System.out.println(A * (b[2]-'0'));
+        System.out.println(A * (b[1]-'0'));
+        System.out.println(A * (b[0]-'0'));        
+        System.out.println(A * Integer.parseInt(B));        
     }
 }
