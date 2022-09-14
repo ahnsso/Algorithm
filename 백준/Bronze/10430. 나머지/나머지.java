@@ -12,9 +12,13 @@ public class Main {
         int B = Integer.parseInt(st.nextToken());
         int C = Integer.parseInt(st.nextToken());
         
-        System.out.println((A+B)%C);
-        System.out.println(((A%C)+(B%C))%C);
-        System.out.println((A*B)%C);
-        System.out.println(((A%C)*(B%C))%C);
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append((A+B)%C + "\n");
+        sb.append(((A%C)+(B%C))%C + "\n");
+        sb.append((A*B)%C + "\n");
+        sb.append(((A%C)*(B%C))%C);
+        
+        System.out.println(sb);
     }
 }
