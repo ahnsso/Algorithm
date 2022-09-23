@@ -2,23 +2,27 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
+        Integer.parseInt(br.readLine());    // 입력받는 갯수는 사용안하므로 입력만 받기
         
         StringTokenizer st = new StringTokenizer(br.readLine()," ");
+        int max = -1000001;    // -1,000,000보다 크거나 같은 정수
+        int min = 1000001;    // 1,000,000보다 작거나 같은 정수
         
-        int index = 0;
-        int[] arr = new int[N];
         while(st.hasMoreTokens()) {
-            arr[index] = Integer.parseInt(st.nextToken());
-            index++;            
+            int a = Integer.parseInt(st.nextToken());
+            
+            if(a>max) {
+                max = a;
+            }
+            if(a<min) {
+                min = a;
+            }
         }
         
-        Arrays.sort(arr);
-        System.out.print(arr[0]+" "+arr[N-1]);
+        System.out.print(min+" "+max);
     }
 }
