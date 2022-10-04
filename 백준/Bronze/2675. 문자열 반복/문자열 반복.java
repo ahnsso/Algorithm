@@ -5,6 +5,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         
         int T = Integer.parseInt(br.readLine());
         
@@ -12,14 +13,14 @@ public class Main {
             String[] str = br.readLine().split(" ");    //공백분리
             
             int R = Integer.parseInt(str[0]);    //반복횟수
-            String S = str[1];
             
-            for(int j=0; j<S.length(); j++) {
-                for(int k=0; k<R; k++) {
-                    System.out.print(S.charAt(j));
+            for(byte val : str[1].getBytes()) {
+                for(int j=0; j<R; j++) {
+                    sb.append((char)val);
                 }
             }
-            System.out.println();
+            sb.append("\n");
         }
+        System.out.print(sb);
     }
 }
