@@ -1,13 +1,28 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.IOException;
-import java.util.StringTokenizer;
  
 public class Main {
+ 
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine()," ");
+		int count = 0;
+		int pre_str = 32;	//32는 공백
+		int str ;           
         
-		System.out.print(st.countTokens()); //countTokens()는 토큰의 개수를 반환함.
+		while(true) {
+			str = System.in.read();    //입력받은 문자
+            
+			if(str==32) { 
+				if(pre_str!=32) count++;
+			}
+ 
+			else if(str==10) {
+				if(pre_str!=32) count++;
+				break;
+			}
+			
+			pre_str = str;
+		}
+		
+		System.out.println(count);
 	}
+ 
 }
