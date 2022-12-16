@@ -1,5 +1,6 @@
 class Solution {
     public int[] solution(int n, int m) {
+        
         int max = Math.max(n, m);
         int min = Math.min(n, m);
         
